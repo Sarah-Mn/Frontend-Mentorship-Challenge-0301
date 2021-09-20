@@ -1,0 +1,152 @@
+@import url(./reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Gluten&display=swap');
+
+/* colors */
+:root{
+    --addBtn: #660708;
+    --checkBtn: #52b788;
+    --deleteBtn: #E5625E;
+    --background: #000000;
+    --dark: #080808;
+    --light: #f4f1de;
+}
+
+html{
+    font-size:62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--background);
+    color: var(--light);
+    font-family: Gluten, sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size:3rem;
+    color: var(--addBtn);
+}
+
+header,
+form{
+    min-height:20vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+form input, form button{
+    padding:1rem;
+    font-size: 3rem;
+    border: none;
+    background:var(--light);
+    outline: none;
+}
+
+form input{
+    border-radius: 1rem 0 0 1rem ;
+}
+
+form button{
+    border-radius: 0 1rem 1rem 0 ;
+    color:var(--addBtn);
+    background:var(--light);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover, form button:focus{
+    background:var(--addBtn);
+    color:var(--light);
+}
+
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.todo-list{
+    min-width: 40%;
+    list-style: none;
+    
+}
+
+.todo{
+    margin:.7rem;
+    background:var(--light);
+    color: var(--dark);
+    font-size:2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.todo li{
+    flex: 1;
+    
+}
+
+.trash-btn,
+.complete-btn{
+    background: var(--deleteBtn);
+    color: var(--light);
+    border: none;
+    padding:1rem;
+    cursor: pointer;
+    font-size:2rem;
+}
+
+.trash-btn:hover, .trash-btn:focus{
+    background: var(--light);
+    color: var(--deleteBtn);
+}
+
+.complete-btn{
+    background: var(--checkBtn);
+}
+.complete-btn:hover, .complete-btn:focus{
+    background: var(--light);
+    color: var(--checkBtn);
+}
+
+.todo-item{
+    padding: 0 .5rem;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+
+.completed{
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity:0;
+}
+
+@media (max-width:576px) {
+    header{
+        font-size:2rem;
+    }
+
+    form input{
+        width:25rem;
+    }
+
+    .todo-list{
+        min-width: 70%;
+        
+    }
+}
