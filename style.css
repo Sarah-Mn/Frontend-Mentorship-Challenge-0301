@@ -120,8 +120,8 @@ form button:hover, form button:focus{
     padding: 0 .5rem;
 }
 
-.fa-trash,
-.fa-check{
+.fa-clipboard-check,
+.fa-trash-alt{
     pointer-events: none;
 }
 
